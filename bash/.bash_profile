@@ -25,9 +25,10 @@ export PATH="$HOME/Applications/Android/bin:$PATH"
 
 # Aliases
 alias ll='ls -l'
-# ignore some patterns for the basic tree command
-alias treeall='tree --dirsfirst -C -I ".git"'
-alias tree="tree --dirsfirst -C -I \".git|*.pyc|*.egg-info|build|__pycache__|venv*|deps|_build|node_modules|vendor\""
+
+# ignore some patterns for the basic tree command --> done in .zshrc
+# alias treeall='tree --dirsfirst -C -I ".git"'
+# alias tree="tree --dirsfirst -C -I \".git|*.pyc|*.egg-info|build|__pycache__|venv*|deps|_build|node_modules|vendor\""
 if [[ :$PATH: != *:"~/.local/bin":* ]] ; then
     export PATH=~/.local/bin:$PATH
 fi
