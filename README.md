@@ -2,7 +2,7 @@
 
 Basic config files for setting up unix based machines.
 
-
+```
    -------------------------------
  /                                 \
 |                                  |
@@ -31,6 +31,7 @@ o          _   ~----~      ___---~
                / /         / /
              /~  |       /~  |
              ~~~~        ~~~~
+ ```
  
  ## Usage
  
