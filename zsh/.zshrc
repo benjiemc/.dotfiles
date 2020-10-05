@@ -72,6 +72,15 @@ plugins=(git virtualenv)
 
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
 
+function virtualenv_info {
+[ $VIRTUAL_ENV ] && echo ‘(‘`basename $VIRTUAL_ENV`’)‘
+}
+
+if [ $TERM_PROGRAM = 'vscode' ]
+then
+    ZSH_THEME="robbyrussell"
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
