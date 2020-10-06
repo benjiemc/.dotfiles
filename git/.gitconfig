@@ -6,3 +6,5 @@
 [user]
 	name = benjiemc
 	email = benjamin.mcmaster@alumni.ubc.ca
+[core]
+	pager = cat

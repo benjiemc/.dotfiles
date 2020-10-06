@@ -106,6 +106,5 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 alias treeall='tree --dirsfirst -C -I ".git"'
 alias tree="tree --dirsfirst -C -I \".git|*.pyc|*.egg-info|build|__pycache__|venv*|deps|_build|node_modules|vendor\""
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
