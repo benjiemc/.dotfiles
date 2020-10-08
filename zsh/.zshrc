@@ -81,6 +81,11 @@ then
     ZSH_THEME="robbyrussell"
 fi
 
+pyclean () {
+        find . -type f -name "*.py[co]" -delete
+        find . -type d -name "__pycache__" -delete
+}
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
