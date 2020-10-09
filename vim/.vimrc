@@ -70,6 +70,19 @@ function NERDTreeToggle()
     endif
 endfunction 
 
+function! ConflictsHighlight() abort
+    syn region conflictStart start=/^<<<<<<< .*$/ end=/^\ze\(=======$\||||||||\)/
+    syn region conflictMiddle start=/^||||||| .*$/ end=/^\ze=======$/
+    syn region conflictEnd start=/^\(=======$\||||||| |\)/ end=/^>>>>>>> .*$/
+    highlight conflictStart ctermbg=red ctermfg=black
+    highlight conflictMiddle ctermbg=blue ctermfg=black
+    highlight conflictEnd ctermbg=green cterm=bold ctermfg=black
+endfunction
+augroup MyColors
+    autocmd!
+    autocmd BufEnter * call ConflictsHighlight()
+augroup END
+
 " disable autoindent when pasting text
 " source: https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
 let &t_SI .= "\<Esc>[?2004h"
