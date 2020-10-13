@@ -70,6 +70,8 @@ function NERDTreeToggle()
     endif
 endfunction 
 
+set hlsearch
+
 function! ConflictsHighlight() abort
     syn region conflictStart start=/^<<<<<<< .*$/ end=/^\ze\(=======$\||||||||\)/
     syn region conflictMiddle start=/^||||||| .*$/ end=/^\ze=======$/
