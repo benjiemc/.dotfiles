@@ -60,6 +60,9 @@ syntax on
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\~$']
 let NERDTreeMinimalUI = 1
 let g:nerdtree_open = 0
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 map <leader>n :call NERDTreeToggle()<CR>
 function NERDTreeToggle()
     NERDTreeTabsToggle
