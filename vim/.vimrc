@@ -20,6 +20,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/The-NERD-tree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
  
  
 " add all your plugins here (note older versions of Vundle
@@ -69,6 +70,9 @@ function NERDTreeToggle()
         wincmd p
     endif
 endfunction 
+
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
 
 set hlsearch
 
