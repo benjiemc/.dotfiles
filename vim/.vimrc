@@ -48,7 +48,7 @@ set textwidth=79
 set expandtab
 set autoindent
 set fileformat=unix
-:set nofoldenable
+set nofoldenable
  
  
 set encoding=utf-8
@@ -57,13 +57,14 @@ let python_highlight_all=1
 syntax on
 
 " file browser
-let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\~$']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\~$', '*\.egg-info']
 let NERDTreeMinimalUI = 1
 let g:nerdtree_open = 0
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-map <leader>n :call NERDTreeToggle()<CR>
+nmap <silent> <F3> :NERDTreeToggle<CR>
+
 function NERDTreeToggle()
     NERDTreeTabsToggle
     if g:nerdtree_open == 1
@@ -79,6 +80,7 @@ autocmd VimEnter * wincmd p
 
 set hlsearch
 
+" highlight git merge conflicts
 function! ConflictsHighlight() abort
     syn region conflictStart start=/^<<<<<<< .*$/ end=/^\ze\(=======$\||||||||\)/
     syn region conflictMiddle start=/^||||||| .*$/ end=/^\ze=======$/
@@ -87,6 +89,7 @@ function! ConflictsHighlight() abort
     highlight conflictMiddle ctermbg=blue ctermfg=black
     highlight conflictEnd ctermbg=green cterm=bold ctermfg=black
 endfunction
+
 augroup MyColors
     autocmd!
     autocmd BufEnter * call ConflictsHighlight()
