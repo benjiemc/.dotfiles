@@ -22,22 +22,22 @@ set number
 set relativenumber
 set nofoldenable
 
-autocmd BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=99
-    \ set expandtab
-    \ set autoindent
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=99 |
+    \ set expandtab |
+    \ set autoindent |
     \ set fileformat=unix
 
 let python_highlight_all=1
 syntax on
  
-autocmd BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 
  
 set encoding=utf-8
  
