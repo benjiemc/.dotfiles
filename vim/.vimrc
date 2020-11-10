@@ -1,6 +1,8 @@
-" vim-plug
+" spacevspaceim-plug
 call plug#begin('~/.vim/plugged')
+Plug 'jremmen/vim-ripgrep'
 Plug 'vim-scripts/indentpython.vim'
+Plug 'git@github.com:kien/ctrlp.vim.git'
 Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/nerdtree'
@@ -11,35 +13,53 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
  
  
-nnoremap <space> za
- 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <leader>h <C-W><C-H>
+nnoremap <leader>l <C-W><C-L>
+nnoremap <leader>j <C-W><C-J>
+nnoremap <leader>k <C-W><C-K>
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
  
+syntax on
+
+set encoding=utf-8
 set number
 set relativenumber
 set nofoldenable
+set nowrap
+set incsearch
+set smartindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set noerrorbells
+
+let mapleader = " "
+nnoremap <leader>ps :Rg<SPACE>
+
+if executable('rg')
+    let g:rg_derive_root='true'
+endif
 
 au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
     \ set textwidth=99 |
-    \ set expandtab |
     \ set autoindent |
+    \ set colorcolumn=100 |
+    \ let python_highlight_all=1
+    \ highlight ColorColumn ctermbg=0 guibg=lightgrey |
     \ set fileformat=unix
 
-let python_highlight_all=1
-syntax on
  
 au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 
- 
-set encoding=utf-8
  
 
 " file browser
@@ -64,6 +84,10 @@ endfunction
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+
+" highlighting
 set hlsearch
 
 " highlight git merge conflicts
