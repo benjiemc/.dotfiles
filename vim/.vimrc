@@ -48,11 +48,12 @@ if executable('rg')
 endif
 
 au BufNewFile,BufRead *.py
-    \ set textwidth=99 |
+    \ set textwidth=119 |
     \ set autoindent |
-    \ set colorcolumn=100 |
-    \ let python_highlight_all=1
+    \ set colorcolumn=120 |
+    \ let python_highlight_all=1 |
     \ highlight ColorColumn ctermbg=0 guibg=lightgrey |
+    \ let g:syntastic_python_checkers = ['pylint'] |
     \ set fileformat=unix
 
  
