@@ -85,13 +85,19 @@ function set_prompt() {
 
 export PROMPT_COMMAND=set_prompt
 
+pyclean () {
+        find . -type f -name "*.py[co]" -delete
+        find . -type d -name "__pycache__" -delete
+        find . -type d -name "*.egg-info" -exec rm -rf {} \;
+}
+
 # Aliases
 unamestr=$(uname)
 if [[ "$unamestr" == "Linux" ]]; then
     alias ls='ls --color --group-directories-first'
 elif [[ "$unamestr" == "Darwin" ]]; then
     export PATH=$HOME/bin/:$HOME/bin/brew/bin:$HOME/Library/Python/2.7/bin:$PATH
-    alias ls='gls --color --group-directories-first'
+    # alias ls='gls --color --group-directories-first'
 fi
 alias ll='ls -l'
 # ignore some patterns for the basic tree command
