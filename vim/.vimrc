@@ -36,6 +36,9 @@ endif
 
 colorscheme spaceduck
 
+hi Visual cterm=None ctermfg=None ctermbg=blue
+hi Search ctermfg=red ctermbg=yellow
+
 set encoding=utf-8
 set number
 set relativenumber
