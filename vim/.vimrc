@@ -10,6 +10,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 call plug#end()
  
  
@@ -26,6 +27,14 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
  
 syntax on
+
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
+colorscheme spaceduck
 
 set encoding=utf-8
 set number
