@@ -11,6 +11,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+Plug 'lervag/vimtex'
 call plug#end()
  
  
@@ -117,6 +118,11 @@ augroup MyColors
     autocmd!
     autocmd BufEnter * call ConflictsHighlight()
 augroup END
+
+" vimtex config
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
 
 " disable autoindent when pasting text
 " source: https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
