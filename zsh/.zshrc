@@ -124,3 +124,7 @@ alias treeall='tree --dirsfirst -C -I ".git"'
 alias tree="tree --dirsfirst -C -I \".git|*.pyc|*.egg-info|build|__pycache__|venv*|deps|_build|node_modules|vendor\""
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+
+# Vim Keybindings
+bindkey -v
+bindkey '^R' history-incremental-search-backward
