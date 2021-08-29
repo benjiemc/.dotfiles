@@ -95,9 +95,6 @@ function NERDTreeToggle()
     endif
 endfunction 
 
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 
