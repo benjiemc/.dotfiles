@@ -99,6 +99,7 @@ pyclean () {
 
 source $ZSH/oh-my-zsh.sh
 
+unsetopt autocd
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
