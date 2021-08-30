@@ -66,7 +66,7 @@ au BufNewFile,BufRead *.py
     \ set colorcolumn=120 |
     \ let python_highlight_all=1 |
     \ highlight ColorColumn ctermbg=0 guibg=lightgrey |
-    \ let g:syntastic_python_checkers = ['pylint'] |
+    \ let g:syntastic_python_checkers = ['pylint', 'flake8'] |
     \ set fileformat=unix
 
  
