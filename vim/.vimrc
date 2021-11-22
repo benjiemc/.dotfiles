@@ -57,6 +57,9 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set noerrorbells
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
 
 
 if executable('rg')
