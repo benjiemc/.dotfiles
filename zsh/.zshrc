@@ -97,6 +97,11 @@ pyclean () {
         find . -type d -name "*.egg-info" -exec rm -rf {} \;
 }
 
+# tmux config
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 unsetopt autocd
