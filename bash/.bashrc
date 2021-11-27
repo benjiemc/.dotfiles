@@ -106,3 +106,5 @@ alias tree="tree --dirsfirst -C -I \".git|*.pyc|*.egg-info|build|__pycache__|ven
 if [[ :$PATH: != *:"~/.local/bin":* ]] ; then
     export PATH=~/.local/bin:$PATH
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

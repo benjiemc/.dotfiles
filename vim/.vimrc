@@ -1,6 +1,5 @@
 " spacevspaceim-plug
 call plug#begin('~/.vim/plugged')
-Plug 'jremmen/vim-ripgrep'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'git@github.com:kien/ctrlp.vim.git'
 Plug 'vim-syntastic/syntastic'
@@ -29,6 +28,7 @@ nnoremap <leader>t :botright terminal<Cr>
 nnoremap <leader>+ :vertical resize +5<CR>
 nnoremap <leader>- :vertical resize -5<CR>
 nnoremap <leader>ps :Rg<SPACE>
+nnoremap <leader>f :FZF<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
  
@@ -60,7 +60,7 @@ set noerrorbells
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
-
+set rtp+=/usr/local/opt/fzf
 
 if executable('rg')
     let g:rg_derive_root='true'

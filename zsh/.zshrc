@@ -135,3 +135,6 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 # Vim Keybindings
 bindkey -v
 bindkey '^R' history-incremental-search-backward
+
+# FZF settings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
