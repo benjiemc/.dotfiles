@@ -61,6 +61,7 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 set rtp+=/usr/local/opt/fzf
+set backspace=indent,eol,start
 
 if executable('rg')
     let g:rg_derive_root='true'
@@ -81,6 +82,12 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set softtabstop=2 |
     \ set shiftwidth=2 
  
+" Latex Settings
+au BufNewFile,BufRead *.tex
+    \ nnoremap <leader>c !:w !detex \| wc -w<CR> |
+    \ set spell |
+    \ set wrap
+
 
 " file browser
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\~$', '*\.egg-info']
