@@ -11,6 +11,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'lervag/vimtex'
+Plug 'ledger/vim-ledger'
 call plug#end()
  
  
@@ -88,6 +89,15 @@ au BufNewFile,BufRead *.tex
     \ set spell |
     \ set wrap
 
+" For ledger
+au BufNewFile,BufRead *.dat,*.ldg,*.ledger setf ledger | comp ledger
+let g:ledger_maxwidth = 120
+let g:ledger_fold_blanks = 1
+function LedgerSort()
+    :%! ledger -f - print --sort 'date, amount'
+    :%LedgerAlign
+endfunction
+command LedgerSort call LedgerSort()
 
 " file browser
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\~$', '*\.egg-info']
