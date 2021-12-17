@@ -13,15 +13,12 @@ Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'lervag/vimtex'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ledger/vim-ledger'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
  
  
 let mapleader = " "
 
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 nnoremap <leader>h <C-W><C-H>
 nnoremap <leader>l <C-W><C-L>
 nnoremap <leader>j <C-W><C-J>
@@ -143,6 +140,9 @@ augroup END
 " vimtex config
 let g:tex_flavor='latex'
 let g:vimtex_quickfix_mode=0
+
+" TMUX Nav
+let g:tmux_navigator_save_on_switch = 2
 
 " disable autoindent when pasting text
 " source: https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
