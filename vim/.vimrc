@@ -84,7 +84,7 @@ au BufNewFile,BufRead *.js, *.html, *.css
 " Latex Settings
 au BufNewFile,BufRead *.tex
     \ nnoremap <leader>c !:w !detex \| wc -w<CR> |
-    \ set spell |
+    \ set spell spelllang=en_ca |
     \ set wrap
 
 " For ledger
