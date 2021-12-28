@@ -16,6 +16,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ledger/vim-ledger'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-system-copy'
+Plug 'benjiemc/vim-draw', { 'do': './install.sh' }
 call plug#end()
  
  
@@ -88,6 +89,13 @@ au BufNewFile,BufRead *.tex
     \ nnoremap <leader>c !:w !detex \| wc -w<CR> |
     \ set spell spelllang=en_ca |
     \ set wrap
+
+au BufNewFile,BufRead *.md
+    \ set wrap |
+    \ set spell spelllang=en_ca |
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2
 
 " For ledger
 au BufNewFile,BufRead *.dat,*.ldg,*.ledger setf ledger | comp ledger
