@@ -7,6 +7,7 @@ Plug 'nvie/vim-flake8'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
