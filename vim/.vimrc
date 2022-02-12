@@ -100,12 +100,14 @@ let g:vimtex_view_method = 'zathura'
 let g:tex_flavor='latex'
 let g:vimtex_quickfix_mode=0
 
-au BufNewFile,BufRead *.md
+" Markdown Settings
+au BufNewFile,BufRead *.md,*.rmd,*.Rmd
     \ set wrap |
     \ set spell spelllang=en_ca |
     \ set tabstop=2 |
     \ set softtabstop=2 |
-    \ set shiftwidth=2
+    \ set shiftwidth=2 |
+    \ nnoremap <leader>c !:w !Rscript -e "rmarkdown::render('%', quiet = TRUE)"<CR>
 
 " For ledger
 au BufNewFile,BufRead *.dat,*.ldg,*.ledger setf ledger | comp ledger
@@ -141,6 +143,9 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 " highlighting
 set hlsearch
+highlight htmlBold gui=bold guifg=#af0000 ctermfg=124
+highlight htmlItalic gui=italic guifg=#ff8700 ctermfg=214
+
 
 " highlight git merge conflicts
 function! ConflictsHighlight() abort
