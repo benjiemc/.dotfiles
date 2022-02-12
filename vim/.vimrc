@@ -88,7 +88,17 @@ au BufNewFile,BufRead *.js, *.html, *.css
 au BufNewFile,BufRead *.tex
     \ nnoremap <leader>c !:w !detex \| wc -w<CR> |
     \ set spell spelllang=en_ca |
-    \ set wrap
+    \ imap .<Space> .<CR>|
+    \ imap ?<Space> ?<CR>|
+    \ imap !<Space> !<CR>|
+    \ set tw=119 |
+    \ set colorcolumn=120 |
+    \ highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+" vimtex config
+let g:vimtex_view_method = 'zathura'
+let g:tex_flavor='latex'
+let g:vimtex_quickfix_mode=0
 
 au BufNewFile,BufRead *.md
     \ set wrap |
@@ -146,10 +156,6 @@ augroup MyColors
     autocmd!
     autocmd BufEnter * call ConflictsHighlight()
 augroup END
-
-" vimtex config
-let g:tex_flavor='latex'
-let g:vimtex_quickfix_mode=0
 
 " TMUX Nav
 let g:tmux_navigator_save_on_switch = 2
