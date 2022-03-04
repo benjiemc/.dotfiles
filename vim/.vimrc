@@ -22,6 +22,10 @@ call plug#end()
  
 let mapleader = " "
 
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 nnoremap <leader>h <C-W><C-H>
 nnoremap <leader>l <C-W><C-L>
 nnoremap <leader>j <C-W><C-J>
