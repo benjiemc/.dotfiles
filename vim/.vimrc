@@ -107,6 +107,8 @@ let g:vimtex_quickfix_mode=0
 " Markdown Settings
 au BufNewFile,BufRead *.md,*.rmd,*.Rmd
     \ set wrap |
+    \ set tw=119 |
+    \ set colorcolumn=120 |
     \ set spell spelllang=en_ca |
     \ set tabstop=2 |
     \ set softtabstop=2 |
