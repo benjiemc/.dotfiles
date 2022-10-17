@@ -14,6 +14,7 @@ Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'lervag/vimtex'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ledger/vim-ledger'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-system-copy'
 Plug 'benjiemc/vim-draw', { 'do': './install.sh' }
