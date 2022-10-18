@@ -22,25 +22,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-system-copy'
 Plug 'benjiemc/vim-draw', { 'do': './install.sh' }
 call plug#end()
- 
- 
-let mapleader = " "
 
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nnoremap <leader>h <C-W><C-H>
-nnoremap <leader>l <C-W><C-L>
-nnoremap <leader>j <C-W><C-J>
-nnoremap <leader>k <C-W><C-K>
-nnoremap <leader>t :botright terminal<Cr>
-nnoremap <leader>+ :vertical resize +5<CR>
-nnoremap <leader>- :vertical resize -5<CR>
-nnoremap <leader>ps :Rg<SPACE>
-nnoremap <leader>f :FZF<CR>
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+lua require('maps')
  
 syntax on
 
