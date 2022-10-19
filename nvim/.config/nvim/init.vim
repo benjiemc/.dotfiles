@@ -23,9 +23,9 @@ Plug 'christoomey/vim-system-copy'
 Plug 'benjiemc/vim-draw', { 'do': './install.sh' }
 call plug#end()
 
+lua require('settings')
 lua require('maps')
  
-syntax on
 
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -38,23 +38,7 @@ colorscheme spaceduck
 hi Visual cterm=None ctermfg=None ctermbg=blue
 hi Search ctermfg=red ctermbg=yellow
 
-set encoding=utf-8
-set number
-set relativenumber
-set nofoldenable
-set nowrap
-set incsearch
-set smartindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set noerrorbells
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swap//
-set undodir=~/.vim/undo//
 set rtp+=/usr/local/opt/fzf
-set backspace=indent,eol,start
 
 if executable('rg')
     let g:rg_derive_root='true'
