@@ -25,18 +25,7 @@ call plug#end()
 
 lua require('settings')
 lua require('maps')
- 
-
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
-
-colorscheme spaceduck
-
-hi Visual cterm=None ctermfg=None ctermbg=blue
-hi Search ctermfg=red ctermbg=yellow
+lua require('appearance') 
 
 set rtp+=/usr/local/opt/fzf
 
@@ -117,27 +106,6 @@ endfunction
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-
-" highlighting
-set hlsearch
-highlight htmlBold gui=bold guifg=#af0000 ctermfg=124
-highlight htmlItalic gui=italic guifg=#ff8700 ctermfg=214
-
-
-" highlight git merge conflicts
-function! ConflictsHighlight() abort
-    syn region conflictStart start=/^<<<<<<< .*$/ end=/^\ze\(=======$\||||||||\)/
-    syn region conflictMiddle start=/^||||||| .*$/ end=/^\ze=======$/
-    syn region conflictEnd start=/^\(=======$\||||||| |\)/ end=/^>>>>>>> .*$/
-    highlight conflictStart ctermbg=red ctermfg=black
-    highlight conflictMiddle ctermbg=blue ctermfg=black
-    highlight conflictEnd ctermbg=green cterm=bold ctermfg=black
-endfunction
-
-augroup MyColors
-    autocmd!
-    autocmd BufEnter * call ConflictsHighlight()
-augroup END
 
 " TMUX Nav
 let g:tmux_navigator_save_on_switch = 2
