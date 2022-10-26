@@ -5,6 +5,7 @@ ctrlp_user_command = { '.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-st
 tmux_navigator_save_on_switch = 2
 
 return require('packer').startup(function(use)
+    use {'wbthomason/packer.nvim'}
     use { 'vim-scripts/indentpython.vim' }
     use { 'git@github.com:kien/ctrlp.vim.git' }
     use { 'vim-syntastic/syntastic' }
