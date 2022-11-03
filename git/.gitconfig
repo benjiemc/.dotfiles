@@ -5,8 +5,8 @@
 	clean = git-lfs clean -- %f
 
 [user]
-	name = benjiemc
-	email = benjiemc@telus.net
+	name = Benjamin McMaster
+	email = benjamin.mcmaster@rdm.ox.ac.uk
 
 [core]
 	pager = less -FRX
