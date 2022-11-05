@@ -4,8 +4,6 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'git@github.com:kien/ctrlp.vim.git'
 Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
@@ -125,25 +123,6 @@ function LedgerSort()
     :%LedgerAlign
 endfunction
 command LedgerSort call LedgerSort()
-
-" file browser
-let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\~$', '*\.egg-info']
-let NERDTreeMinimalUI = 1
-let g:nerdtree_open = 0
-let g:NERDTreeDirArrows = 1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-nmap <silent> <F3> :NERDTreeToggle<CR>
-
-function NERDTreeToggle()
-    NERDTreeTabsToggle
-    if g:nerdtree_open == 1
-        let g:nerdtree_open = 0
-    else
-        let g:nerdtree_open = 1
-        wincmd p
-    endif
-endfunction 
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
