@@ -1,4 +1,4 @@
-" spacevspaceim-plug
+" Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-syntastic/syntastic'
@@ -17,7 +17,7 @@ Plug 'christoomey/vim-system-copy'
 Plug 'benjiemc/vim-draw', { 'do': './install.sh' }
 call plug#end()
  
- 
+" Mappings
 let mapleader = " "
 
 nmap <silent> gd <Plug>(coc-definition)
@@ -31,11 +31,11 @@ nnoremap <leader>k <C-W><C-K>
 nnoremap <leader>t :botright terminal<Cr>
 nnoremap <leader>+ :vertical resize +5<CR>
 nnoremap <leader>- :vertical resize -5<CR>
-nnoremap <leader>ps :Rg<SPACE>
 nnoremap <leader>f :FZF<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
  
+" Appearance
 syntax on
 
 if exists('+termguicolors')
@@ -49,6 +49,7 @@ colorscheme spaceduck
 hi Visual cterm=None ctermfg=None ctermbg=blue
 hi Search ctermfg=red ctermbg=yellow
 
+" Settings
 set encoding=utf-8
 set number
 set relativenumber
@@ -66,10 +67,6 @@ set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 set rtp+=/usr/local/opt/fzf
 set backspace=indent,eol,start
-
-if executable('rg')
-    let g:rg_derive_root='true'
-endif
 
 " highlighting
 set hlsearch
