@@ -1,7 +1,6 @@
 " spacevspaceim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/indentpython.vim'
-Plug 'git@github.com:kien/ctrlp.vim.git'
 Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
 Plug 'tpope/vim-fugitive'
@@ -123,9 +122,6 @@ function LedgerSort()
     :%LedgerAlign
 endfunction
 command LedgerSort call LedgerSort()
-
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
 
 " highlighting
 set hlsearch
