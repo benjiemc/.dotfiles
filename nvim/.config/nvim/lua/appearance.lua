@@ -8,8 +8,6 @@ endif
 
 vim.cmd 'colorscheme spaceduck'
 
-local set_hl = vim.api.nvim_set_hl
-
 -- highlighting
 vim.opt.hlsearch = true
 vim.cmd [[
