@@ -15,9 +15,9 @@ set.softtabstop = 4
 set.shiftwidth = 4
 set.errorbells = false
 
-set.backupdir = os.getenv("HOME") .. '/.vim/backup'
-set.directory = os.getenv("HOME") .. '/.vim/swap'
-set.undodir = os.getenv("HOME") .. '/.vim/undo'
+set.backupdir = os.getenv("HOME") .. '/.local/share/nvim/backup'
+set.directory = os.getenv("HOME") .. '/.local/share/nvim/swap'
+set.undodir = os.getenv("HOME") .. '/.local/share/nvim/undo'
 set.undofile = true
 
 set.backspace = {'indent', 'eol', 'start'}
