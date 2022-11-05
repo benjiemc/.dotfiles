@@ -7,5 +7,3 @@ function LedgerSort()
         :%LedgerAlign
     ]]
 end
-
-vim.cmd 'command LedgerSort call LedgerSort()'
