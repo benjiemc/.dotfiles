@@ -6,6 +6,7 @@ return require('packer').startup(function(use)
     use { 'vim-scripts/indentpython.vim' }
     use { 'vim-syntastic/syntastic' }
     use { 'nvie/vim-flake8' }
+    use { 'neovim/nvim-lspconfig' }
     use { 'tpope/vim-fugitive' }
     use { 'tpope/vim-surround' }
     use { 'vim-airline/vim-airline' }
