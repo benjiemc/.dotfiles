@@ -11,4 +11,3 @@ set.shiftwidth = 2
 vim.api.nvim_set_hl(0, 'ColorColumn', {ctermbg = 0, bg = 'lightgrey'})
 
 vim.cmd 'set spell spelllang=en_ca'
-map('n', '<leader>c', "!:w !Rscript -e \"rmarkdown::render('%', quiet = TRUE)\"<CR>", { noremap = true })
