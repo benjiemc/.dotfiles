@@ -10,8 +10,3 @@ map('i', '!<Space>', '!<CR>', {noremap = true})
 map('n', '<leader>c', '!:w !detex | wc -w<CR>', {noremap = true})
 
 vim.cmd 'set spell spelllang=en_ca'
-
--- vimtex config
-vimtex_view_method = 'zathura'
-tex_flavor = 'latex'
-vimtex_quickfix_mode = 0

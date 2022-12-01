@@ -1,5 +1,12 @@
 -- TMUX Nav
-tmux_navigator_save_on_switch = 2
+vim.g.tmux_navigator_save_on_switch = 2
+
+-- vimtex config
+vim.g.tex_flavor = 'latex'
+vim.g.vimtex_view_method = 'skim'
+vim.g.vimtex_view_skim_sync = 1
+vim.g.vimtex_view_skim_activate = 1
+vim.g.vimtex_quickfix_mode = 0
 
 return require('packer').startup(function(use)
     use {'wbthomason/packer.nvim'}
