@@ -2,6 +2,7 @@ vim.cmd 'syntax on'
 
 local set = vim.opt
 
+set.mouse = ""
 set.encoding = 'utf-8'
 set.number = true
 set.relativenumber = true
