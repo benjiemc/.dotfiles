@@ -1,6 +1,3 @@
--- TMUX Nav
-vim.g.tmux_navigator_save_on_switch = 2
-
 -- vimtex config
 vim.g.tex_flavor = 'latex'
 vim.g.vimtex_view_method = 'skim'
