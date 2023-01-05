@@ -22,4 +22,5 @@ return require('packer').startup(function(use)
     use { 'christoomey/vim-system-copy' }
     use { 'benjiemc/vim-draw', run = './install.sh' }
     use { 'nvim-telescope/telescope.nvim', tag = '0.1.x', requires = { {'nvim-lua/plenary.nvim'} } }
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 end) 
