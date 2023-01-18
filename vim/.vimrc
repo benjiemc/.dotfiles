@@ -46,6 +46,7 @@ endif
 
 colorscheme spaceduck
 
+hi Normal guibg=NONE ctermbg=NONE
 hi Visual cterm=None ctermfg=None ctermbg=blue
 hi Search ctermfg=red ctermbg=yellow
 
