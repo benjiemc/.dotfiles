@@ -32,6 +32,7 @@ nnoremap <leader>t :botright terminal<Cr>
 nnoremap <leader>+ :vertical resize +5<CR>
 nnoremap <leader>- :vertical resize -5<CR>
 nnoremap <leader>f :FZF<CR>
+nnoremap <leader>ex :Ex<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
  
