@@ -1,5 +1,5 @@
 " Latex Settings
-set spell spelllang=en_ca 
+set spell spelllang=en_gb
 set tw=119
 set colorcolumn=120
 

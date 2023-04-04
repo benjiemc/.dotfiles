@@ -9,4 +9,4 @@ map('i', '?<Space>', '?<CR>', {noremap = true})
 map('i', '!<Space>', '!<CR>', {noremap = true})
 map('n', '<leader>c', '!:w !detex | wc -w<CR>', {noremap = true})
 
-vim.cmd 'set spell spelllang=en_ca'
+vim.cmd 'set spell spelllang=en_gb'
