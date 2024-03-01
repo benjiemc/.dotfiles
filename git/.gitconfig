@@ -11,6 +11,7 @@
 [core]
 	pager = less -FRX
 	autocrlf = input
+	editor = vim
 
 [fetch]
     prune = true
