@@ -31,4 +31,3 @@ if [[ :$PATH: != *:"~/.local/bin":* ]] ; then
 fi
 
 source ~/.bashrc
-. "$HOME/.cargo/env"
