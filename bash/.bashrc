@@ -91,6 +91,8 @@ pyclean () {
         find . -type d -name "*.egg-info" -exec rm -rf {} \;
 }
 
+set -o vi
+
 # Aliases
 unamestr=$(uname)
 if [[ "$unamestr" == "Linux" ]]; then
