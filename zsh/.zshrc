@@ -98,9 +98,6 @@ pyclean () {
 }
 
 # tmux config
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux attach -t default || tmux new -s default
-fi
 export TERM=xterm-256color      # https://vi.stackexchange.com/questions/10708/no-syntax-highlighting-in-tmux
 
 source $ZSH/oh-my-zsh.sh
