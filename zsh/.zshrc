@@ -88,11 +88,6 @@ function virtualenv_info {
 [ $VIRTUAL_ENV ] && echo ‘(‘`basename $VIRTUAL_ENV`’)‘
 }
 
-if [ $TERM_PROGRAM = 'vscode' ]
-then
-    ZSH_THEME="robbyrussell"
-fi
-
 pyclean () {
         find . -type f -name "*.py[co]" -delete
         find . -type d -name "__pycache__" -delete
