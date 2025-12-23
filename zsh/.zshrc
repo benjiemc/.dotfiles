@@ -156,7 +156,7 @@ unset __conda_setup
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba shell init' !!
-export MAMBA_EXE='/Users/benjie/miniconda3/bin/mamba';
+export MAMBA_EXE='/Users/benjie/miniconda3/condabin/mamba';
 export MAMBA_ROOT_PREFIX='/Users/benjie/miniconda3';
 __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
