@@ -166,3 +166,5 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
+
+. "$HOME/.local/bin/env"

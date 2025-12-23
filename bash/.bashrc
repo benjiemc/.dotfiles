@@ -110,3 +110,5 @@ if [[ :$PATH: != *:"~/.local/bin":* ]] ; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+. "$HOME/.local/bin/env"

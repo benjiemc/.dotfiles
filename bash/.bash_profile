@@ -31,3 +31,5 @@ if [[ :$PATH: != *:"~/.local/bin":* ]] ; then
 fi
 
 source ~/.bashrc
+
+. "$HOME/.local/bin/env"
